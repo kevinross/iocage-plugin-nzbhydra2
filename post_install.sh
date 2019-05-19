@@ -17,4 +17,4 @@ chmod u+x /usr/local/etc/rc.d/nzbhydra2
 sysrc -f /etc/rc.conf nzbhydra2_enable="YES"
 
 # Start the service
-service nzbhydra2_plexpass start 2>/dev/null
+service nzbhydra2 start 2>/dev/null
