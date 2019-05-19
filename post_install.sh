@@ -12,6 +12,9 @@ rm /usr/local/nzbhydra2-*-linux.zip
 # Add user
 pw user add nzbhydra2 -c nzbhydra2 -u 999 -d /nonexistent -s /usr/bin/nologin
 
+# Change ownership
+chown -R nzbhydra2:nzbhydra2 /usr/local/share/nzbhydra2
+
 # Add service
 cp /usr/local/nzbhydra2/rc.d/nzbhydra2 /etc/rc.d/nzbhydra2
 chmod u+x /etc/rc.d/nzbhydra2
