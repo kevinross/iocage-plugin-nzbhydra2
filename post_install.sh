@@ -4,7 +4,7 @@
 fetch $(curl -s https://api.github.com/repos/theotherp/nzbhydra2/releases/latest | grep browser_download_url | grep 'linux[.]zip' | cut -d '"' -f 4) -o /usr/local/share
 
 # Extract
-unzip /usr/local/share/nzbhydra2-*-linux.zip -o -d /usr/local/share/nzbhydra2"
+unzip /usr/local/share/nzbhydra2-*-linux.zip -o -d /usr/local/share/nzbhydra2
 
 # Add user
 pw user add nzbhydra2 -c nzbhydra2 -u 999 -d /nonexistent -s /usr/bin/nologin
