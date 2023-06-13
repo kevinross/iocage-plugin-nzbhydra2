@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # Fetch latest release
-fetch $(curl -s https://api.github.com/repos/theotherp/nzbhydra2/releases/latest | grep browser_download_url | grep 'linux[.]zip' | cut -d '"' -f 4) -o /usr/local/
+fetch $(curl -s https://api.github.com/repos/theotherp/nzbhydra2/releases/latest | grep browser_download_url | grep 'generic[.]zip' | cut -d '"' -f 4) -o /usr/local/
 
 # Extract
-unzip /usr/local/nzbhydra2-*-linux.zip -o -d /usr/local/nzbhydra2
+unzip /usr/local/nzbhydra2-*-generic.zip -o -d /usr/local/nzbhydra2
 
 #Remove
-rm /usr/local/nzbhydra2-*-linux.zip
+rm /usr/local/nzbhydra2-*-generic.zip
 
 # Add user
 pw user add nzbhydra2 -c nzbhydra2 -u 999 -d /nonexistent -s /usr/bin/nologin
